@@ -1,0 +1,13 @@
+factura
+
+Pedido 1
+Nombre: Carlos
+Dirección: 64
+
+- corral: $14000
+
+Precio neto: $14000
+
+Precio iva: $2660
+
+Precio total: $16660

@@ -1,0 +1,14 @@
+factura
+
+Pedido 0
+Nombre: David
+Dirección: 5
+
+- combo corral: $22050
+- 1/2 libra: $40500
+
+Precio neto: $62550
+
+Precio iva: $11884
+
+Precio total: $74434
