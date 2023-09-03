@@ -9,64 +9,57 @@ import java.util.List;
 
 public class Pedido {
 
-	private static int numeroPedidos = 0;
-	
-	private int idPedido;
-	
-	private String nombreCliente;
-	
-	private String direccionCliente;
-	
-	private List<Producto> itemsPedido;
+    private static int numeroPedidos = 0;
 
-	
-//----------- Constructor --------------
-	
-	public Pedido(String nombreCliente, String direccionCliente) {
+    private int idPedido;
 
-		this.nombreCliente = nombreCliente;
-		this.direccionCliente = direccionCliente;
-		this.itemsPedido = new ArrayList<>();
-		this.idPedido = numeroPedidos;
-	}
+    private String nombreCliente;
 
-//----------- Métodos --------------
-	
-	public int getIdPedido() {
-		return idPedido;
-	}
+    private String direccionCliente;
 
-	public void agregarProducto(Producto nuevoItem) {
-		
-		itemsPedido.add(nuevoItem);
+    private List<Producto> itemsPedido;
 
-	}
-	
-	
-	private int getPrecioNetoPedido() {
-		
-		int precio = 0;
-		
-		for(Producto producto: itemsPedido) {
-			
-			precio += producto.getPrecio();
-			
-		}
-		
-		return precio;
-	}
-	
-	private int getPrecioTotalPedido() {
+    public Pedido(String nombreCliente, String direccionCliente) {
+        this.nombreCliente = nombreCliente;
+        this.direccionCliente = direccionCliente;
+        this.itemsPedido = new ArrayList<>();
+        this.idPedido = numeroPedidos;
+        numeroPedidos++;
+    }
 
-		return getPrecioNetoPedido() + getPrecioIVAPedido();
-	}
+    public int getIdPedido() {
+        return idPedido;
+    }
 
-	private int getPrecioIVAPedido() {
-		
-		return (int) (getPrecioNetoPedido() * 0.19);
-	}
-	
-	private String generarTextoFactura() {
+    public void agregarProducto(Producto nuevoItem) {
+        itemsPedido.add(nuevoItem);
+    }
+
+    private int getPrecioNetoPedido() {
+        int precio = 0;
+        for (Producto producto : itemsPedido) {
+            precio += producto.getPrecio();
+        }
+        return precio;
+    }
+
+    private int getPrecioTotalPedido() {
+        return getPrecioNetoPedido() + getPrecioIVAPedido();
+    }
+
+    private int getPrecioIVAPedido() {
+        return (int) (getPrecioNetoPedido() * 0.19);
+    }
+
+    private int getCaloriasPedido() {
+        int calorias = 0;
+        for (Producto producto : itemsPedido) {
+            calorias += producto.getCalorias();
+        }
+        return calorias;
+    }
+
+    private String generarTextoFactura() {
 		
 		String textoFactura = "factura\n\nPedido " + idPedido + "\nNombre: " + nombreCliente + "\nDirección: " + direccionCliente + "\n";
 		

@@ -2,10 +2,11 @@ package Model;
 
 public interface Producto {
 
-	public int getPrecio();
-	
-	public String getNombre();
-	
-	public String generarTextoFactura();
-	
+    int getPrecio();
+
+    int getCalorias();  // Agregado el método para obtener las calorías del producto
+
+    String getNombre();
+
+    String generarTextoFactura();
 }
