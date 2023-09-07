@@ -219,9 +219,31 @@ public class Aplicacion {
 	}
 
     private void ejecutarPedidoPorId() {
-        // Implementar esta función para consultar información de pedido por ID
-    }
+        int idPedidoBuscado;
+        try {
+            idPedidoBuscado = Integer.parseInt(input("Ingrese el ID del pedido que desea consultar"));
+        } catch (NumberFormatException e) {
+            System.out.println("ID de pedido inválido.");
+            return;
+        }
 
+        Pedido pedidoEncontrado = restaurante.buscarPedidoPorId(idPedidoBuscado);
+
+        if (pedidoEncontrado != null) {
+            System.out.println("Información del Pedido:");
+            System.out.println("ID: " + pedidoEncontrado.getIdPedido());
+            System.out.println("Nombre del Cliente: " + pedidoEncontrado.getNombreCliente());
+            System.out.println("Dirección del Cliente: " + pedidoEncontrado.getDireccionCliente());
+            System.out.println("Productos:");
+
+            for (Producto producto : pedidoEncontrado.getItemsPedido()) {
+                System.out.println(producto.generarTextoFactura());
+            }
+        } else {
+            System.out.println("No se encontró un pedido con el ID ingresado.");
+        }
+    }
+    
     public String input(String mensaje) {
         try {
             System.out.print(mensaje + ": ");
@@ -239,5 +261,3 @@ public class Aplicacion {
         consola.ejecutarOpcion();
     }
 }
-
-

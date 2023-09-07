@@ -38,6 +38,10 @@ public class Restaurante {
         pedidoEnCurso.guardarFactura(archivo);
         pedidoEnCurso = null;
     }
+    
+    public List<Pedido> getPedidos() {
+        return pedidos;
+    }
 
     public List<Ingrediente> getIngredientes() {
         return ingredientes;
@@ -195,6 +199,16 @@ public class Restaurante {
     }
 
     // Método para cargar bebidas desde el archivo de bebidas
+    
+    public Pedido buscarPedidoPorId(int idPedido) {
+        for (Pedido pedido : pedidos) {
+            if (pedido.getIdPedido() == idPedido) {
+                return pedido;
+            }
+        }
+        return null; // Si no se encuentra el pedido
+    }
+    
     private void cargarBebidas(File archivoBebidas) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(archivoBebidas));
 
@@ -211,5 +225,13 @@ public class Restaurante {
             linea = br.readLine();
         }
         br.close();
+    }
+    public Pedido buscarPedidoPorDireccion(String direccion) {
+        for (Pedido pedido : pedidos) {
+            if (pedido.getDireccionCliente().equals(direccion)) {
+                return pedido;
+            }
+        }
+        return null; // Si no se encuentra el pedido
     }
 }

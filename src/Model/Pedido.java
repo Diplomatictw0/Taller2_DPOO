@@ -58,6 +58,17 @@ public class Pedido {
         }
         return calorias;
     }
+    
+    public String getNombreCliente() {
+        return nombreCliente;
+    }
+
+    public String getDireccionCliente() {
+        return direccionCliente;
+    }
+    public List<Producto> getItemsPedido() {
+        return itemsPedido;
+    }
 
     private String generarTextoFactura() {
 		
