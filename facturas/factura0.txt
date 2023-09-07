@@ -1,27 +1,17 @@
 factura
 
 Pedido 0
-Nombre: Cristian
-Dirección: 5
+Nombre: juanj carlos cuervo
+Dirección: 82
 
-- corral: $23500
-	Ingredientes agregados:
-		- piña: +$2500
-		- queso fundido: +$4500
-		- huevo: +$2500
-		- papa callejera: +$2000
-	Ingredientes eliminados:
-		- lechuga: -$1000
-		- tomate: -$1000
-- combo especial: $32084
-	- especial: $24000
+- combo corral: $22050
+	- corral: $14000
 	- papas medianas: $5500
 	- gaseosa: $5000
-	Calorías totales: 34500
-- sprite: $3500
+	Calorías totales: 24500
 
-Precio neto: $59084
+Precio neto: $22050
 
-Precio iva: $11225
+Precio iva: $4189
 
-Precio total: $70309
+Precio total: $26239

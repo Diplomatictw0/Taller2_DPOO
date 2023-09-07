@@ -1,0 +1,27 @@
+factura
+
+Pedido 2
+Nombre: David Ortiz
+Dirección: 64
+
+- corral: $26500
+	Ingredientes agregados:
+		- tomate: +$1000
+		- lechuga: +$1000
+		- papa callejera: +$2000
+		- piña: +$2500
+		- cebolla: +$1000
+		- huevo: +$2500
+		- queso mozzarella: +$2500
+- speed: $1500
+- combo especial: $32084
+	- especial: $24000
+	- papas medianas: $5500
+	- gaseosa: $5000
+	Calorías totales: 34500
+
+Precio neto: $60084
+
+Precio iva: $11415
+
+Precio total: $71499
