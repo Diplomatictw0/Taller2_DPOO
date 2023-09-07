@@ -92,7 +92,7 @@ public class Aplicacion {
         }
 
         String nombreCliente = input("\nPor favor ingrese su nombre");
-        String direccionCliente = input("Por favor ingrese su dirección");
+        String direccionCliente = input("Por favor ingrese la id del pedido");
 
         restaurante.iniciarPedido(nombreCliente, direccionCliente);
         System.out.println("\nPedido iniciado correctamente");
