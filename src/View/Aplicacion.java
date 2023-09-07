@@ -244,7 +244,7 @@ public class Aplicacion {
         }
     }
     
-    public String input(String mensaje) {
+    public String input(String mensaje) { 
         try {
             System.out.print(mensaje + ": ");
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
